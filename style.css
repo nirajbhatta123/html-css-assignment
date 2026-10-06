@@ -1,0 +1,249 @@
+/* Basic page settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+.site-header {
+    background-color: #17324d;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #2d7f9f;
+}
+
+/* Main introduction */
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 75px 20px 55px;
+}
+
+.small-title {
+    margin-bottom: 5px;
+    color: #2d7f9f;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    max-width: 700px;
+    margin: 0 0 15px;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero p:last-child {
+    max-width: 650px;
+    color: #555;
+}
+
+/* About and other simple sections */
+.about-section,
+.info-section,
+.contact-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.about-section {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.about-section p,
+.info-section p,
+.contact-section p {
+    max-width: 750px;
+}
+
+/* Course cards */
+.courses-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.course-card img {
+    width: 100%;
+    height: 170px;
+    display: block;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tag {
+    align-self: flex-start;
+    padding: 4px 9px;
+    border-radius: 20px;
+    background-color: #e7f3f7;
+    color: #23677f;
+    font-size: 13px;
+}
+
+.card-content h3 {
+    margin: 12px 0 8px;
+}
+
+.card-content p {
+    color: #555;
+}
+
+.course-info {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-button,
+.contact-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 9px 15px;
+    background-color: #17324d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.card-button:hover,
+.contact-button:hover {
+    background-color: #2d7f9f;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 40px;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #17324d;
+    color: white;
+    font-size: 14px;
+}
+
+/* Tablet: two cards in a row */
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+/* Mobile: one card in a row */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-section {
+        padding-top: 35px;
+    }
+}
